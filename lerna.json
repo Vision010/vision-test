@@ -8,7 +8,7 @@
       "message": "chore(release): publish"
     },
     "version": {
-      "allowBranch": "master",
+      "allowBranch": "main",
       "includeMergedTags": true,
       "conventionalCommits": true
     }
@@ -70,7 +70,7 @@
     "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
     "userUrlFormat": "{{host}}/{{user}}"
   },
-  "ignoreChanges": ["ignored-file", "**/*.md", "packages/**/src/**/demo/*"],
+  "ignoreChanges": ["ignored-file"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent"
