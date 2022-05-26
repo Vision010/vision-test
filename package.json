@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "v-components",
+  "version": "1.0.0",
+  "workspaces":{
+    "packages": ["packages/*"]
+  },
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean --yes",
+    "build": "lerna run build",
+    "build1": "cross-env PACKAGE=core && father-build",
+    "release": "father-build && lerna publish",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.12.0 || ^17.0.0"
+  },
+  "devDependencies": {
+    "@umijs/test": "^3.0.5",
+    "cross-env": "^7.0.3",
+    "dumi": "^1.0.17",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.1",
+    "yorkie": "^2.0.0"
+  }
+}
