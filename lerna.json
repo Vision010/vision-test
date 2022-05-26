@@ -70,7 +70,7 @@
     "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
     "userUrlFormat": "{{host}}/{{user}}"
   },
-  "ignoreChanges": ["ignored-file"],
+  // "ignoreChanges": ["ignored-file"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent"

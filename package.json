@@ -2,8 +2,10 @@
   "private": true,
   "name": "v-components",
   "version": "1.0.0",
-  "workspaces":{
-    "packages": ["packages/*"]
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "scripts": {
     "start": "dumi dev",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@umijs/test": "^3.0.5",
+    "conventional-changelog-conventionalcommits": "^4.6.3",
     "cross-env": "^7.0.3",
     "dumi": "^1.0.17",
     "father-build": "^1.17.2",
